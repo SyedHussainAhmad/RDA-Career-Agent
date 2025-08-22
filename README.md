@@ -1,4 +1,4 @@
-# RDA Carrier Reference Agent
+# RDA Career Reference Agent
 
 A full-stack chat application for telecom carrier reference queries, built with Node.js/Express backend and your choice of frontend technology.
 
@@ -350,7 +350,7 @@ For issues and questions:
 
 ---
 
-**Built with ❤️ for Pakistani Telecom Industry**
+**Built with ❤️ for Telecom Industry**
 
 Choose the frontend that best fits your needs:
 - **HTML/CSS/JS**: For simplicity and direct browser compatibility
