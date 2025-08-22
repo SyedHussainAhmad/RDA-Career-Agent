@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDA Carrier Reference Agent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+</head>
+<body>
+    <div class="app">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="window-controls">
+                <div class="window-control red"></div>
+                <div class="window-control yellow"></div>
+                <div class="window-control green"></div>
+            </div>
+            <span class="app-title">RDA Carrier Reference Agent</span>
+            <div class="status-indicator">
+                <span id="connection-status" class="status-dot offline"></span>
+                <span id="status-text">Connecting...</span>
+            </div>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-window">
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <div class="header-content">
+                        <div class="header-title">
+                            <h2>Carrier Chat Assistant</h2>
+                            <p>Ask about Pakistani telecom services, pricing, and offers</p>
+                        </div>
+                        <button id="clear-chat" class="clear-button" title="Clear conversation">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 6h18"></path>
+                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Messages Container -->
+                <div id="messages-container" class="messages-container">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">💬</div>
+                        <h3>Welcome to RDA Carrier Reference Agent</h3>
+                        <p>I can help you with carrier offers, pricing, and telecom database queries. Ask me anything about Pakistani telecom services!</p>
+                        <div class="example-queries">
+                            <p><strong>Try asking:</strong></p>
+                            <ul>
+                                <li>"What are the current data plans for Karachi?"</li>
+                                <li>"Compare Jazz and Telenor pricing"</li>
+                                <li>"Show me enterprise solutions for Lahore"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typing Indicator -->
+                <div id="typing-indicator" class="typing-indicator hidden">
+                    <div class="typing-content">
+                        <span>Assistant is typing</span>
+                        <div class="typing-dots">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error Display -->
+                <div id="error-display" class="error-display hidden">
+                    <div class="error-content">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                        <span id="error-message"></span>
+                        <button id="dismiss-error" class="dismiss-error">×</button>
+                    </div>
+                </div>
+
+                <!-- Input Container -->
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="message-input" 
+                            class="message-input" 
+                            placeholder="Ask about carrier offers, pricing, or telecom services..."
+                            rows="1"
+                            maxlength="4000"
+                        ></textarea>
+                        <div class="input-actions">
+                            <span id="char-counter" class="char-counter">0/4000</span>
+                            <button id="send-button" class="send-button" disabled>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                                </svg>
+                                <span>Send</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 RDA Carrier Reference Agent | Built for Pakistani Telecom Industry</p>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <p>Initializing chat...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
